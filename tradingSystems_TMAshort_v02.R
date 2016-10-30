@@ -12,6 +12,9 @@ tradesFile = "Trades.dat"
 recentTrades = data.frame(matrix(nrow = 1,ncol = 8))
 colnames(recentTrades)<-c("Date","System","Symbol","Position","Price","ATR14","SL","Action")
 recentTrade = recentTrades
+  
+#check whether folder 'data' exists, if not create it
+if (!file.exists("data\\Trades.dat")) {  file.create("data\\Trades.dat") }
 
 tradeData = read.csv(paste(thePath,tradesFile,sep=""))
 colnames(tradeData)<-colnames(recentTrades)

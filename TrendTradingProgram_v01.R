@@ -6,7 +6,10 @@ rm(list=ls())
 #theCodePath = "D:\\temp\\MyProjects\\"
 
 UpdateHistoricalData <- function() {
-  
+
+  #check whether folder 'data' exists, if not create it
+  if (!file.exists("data")) {  dir.create("data") }
+    
   require(quantmod)
   startDate = "2013-01-01"
   
@@ -129,11 +132,11 @@ SendEmailUpdate <- function(GUserName, GPassword, EmailReceivers) {
 
 ## Main: calling the functions
 # prep
-UpdateHistoricalData()
-UpdateIndicators()
+#UpdateHistoricalData()
+#UpdateIndicators()
 
 # Systems
-TMA_short()
+#TMA_short()
 
 # email the result
 #SendEmailUpdate("user@gmail.com","password","eric.niedling@gmail.com")
