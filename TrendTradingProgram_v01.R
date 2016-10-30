@@ -3,7 +3,7 @@
 ## eric.niedling@gmail.com - Aug. 2016
 ##########################################
 rm(list=ls())
-theCodePath = "D:\\temp\\MyProjects\\"
+#theCodePath = "D:\\temp\\MyProjects\\"
 
 UpdateHistoricalData <- function() {
   
