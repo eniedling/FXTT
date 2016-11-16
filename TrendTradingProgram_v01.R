@@ -36,7 +36,7 @@ UpdateIndicators <- function() {
   require(plyr)
   
 #  thePath = "D:\\temp\\MyProjects\\"
-  theFiles = list.files(path="data\\",pattern=".csv")
+  theFiles = list.files(path="data\\",pattern="^[^(T)]")
   
   #ptm <- proc.time()
   for (ii in theFiles){
@@ -88,8 +88,9 @@ UpdateIndicators <- function() {
 # print("Done")
 
 TMA_short <- function() {
-   source("tradingSystems_TMAshort_v02.R")
-   return()
+#   source("tradingSystems_TMAshort_v02.R")
+    source("TMAshort_v03.R")
+     return()
  }
 
 SendEmailUpdate <- function(GUserName, GPassword, EmailReceivers) {

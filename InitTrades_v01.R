@@ -1,7 +1,7 @@
 
 #recentTrade = recentTrades
 
-#source("listOfSymbols.r")
+source("listOfSymbols.r")
 #initialize variable theInstruments
 
 InitTrades <- function(FileName,TradeSystem) {
@@ -11,8 +11,8 @@ InitTrades <- function(FileName,TradeSystem) {
     
   dummyRecord <- dfTrades #inherit structure
   dummyRecord$Date <- Sys.Date() - 100
-  dymmyRecord$System <- TradeSystem 
-  dymmyRecord$Position <- "flat"
+  dummyRecord$System <- TradeSystem 
+  dummyRecord$Position <- "flat"
   
   if (!file.exists(FileName))  {file.create(FileName) }  
   
@@ -22,5 +22,5 @@ InitTrades <- function(FileName,TradeSystem) {
     dfTrades <- rbind(dfTrades,dummyRecord)
   }
   
-  write.csv(tradeData,FileName,row.names=FALSE)
+  write.csv(dfTrades,FileName,row.names=FALSE)
 }

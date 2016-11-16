@@ -20,7 +20,7 @@ if (!file.exists("data\\Trades.dat")) {
   
   file.create("data\\Trades.dat")
   source("InitTrades_v01.R")
-  InitTrades("data\\Trades.dat",recentTrades,"TMAshort")
+  InitTrades("data\\Trades.dat","TMAshort")
   }
 
 
