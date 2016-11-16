@@ -18,7 +18,7 @@ InitTrades <- function(FileName,TradeSystem) {
   
   for (TradeSymbol in theInstruments) {
     
-    dummyRecord$Symbol <- TradeSystem
+    dummyRecord$Symbol <- TradeSymbol
     dfTrades <- rbind(dfTrades,dummyRecord)
   }
   
